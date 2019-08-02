@@ -34,13 +34,13 @@
     
     UIButton *button2 = [[UIButton alloc]initWithFrame:CGRectMake(50, CGRectGetMaxY(button.frame)+10, [UIScreen mainScreen].bounds.size.width-100, 100)];
     [button2 setBackgroundColor:[UIColor purpleColor]];
-    [button2 setTitle:@"状态栏黑色模式" forState:UIControlStateNormal];
+    [button2 setTitle:@"状态栏白色模式" forState:UIControlStateNormal];
     [button2 addTarget:self action:@selector(click2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
     
     UIButton *button3 = [[UIButton alloc]initWithFrame:CGRectMake(50, CGRectGetMaxY(button2.frame)+10, [UIScreen mainScreen].bounds.size.width-100, 100)];
     [button3 setBackgroundColor:[UIColor purpleColor]];
-    [button3 setTitle:@"状态栏白色模式" forState:UIControlStateNormal];
+    [button3 setTitle:@"状态栏黑色模式" forState:UIControlStateNormal];
     [button3 addTarget:self action:@selector(click3) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button3];
     
