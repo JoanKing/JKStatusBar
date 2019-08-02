@@ -31,7 +31,7 @@
     UIButton *button1 = [[UIButton alloc]initWithFrame:CGRectMake(50, 100, [UIScreen mainScreen].bounds.size.width-100, 100)];
     [button1 setTitle:@"跳转控制器测试" forState:UIControlStateNormal];
     [button1 setBackgroundColor:[UIColor brownColor]];
-    [button1 addTarget:self action:@selector(click1) forControlEvents:UIControlEventTouchUpInside];
+    [button1 addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button1];
     
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(50, CGRectGetMaxY(button1.frame)+20,[UIScreen mainScreen].bounds.size.width-100, 100)];
@@ -52,6 +52,13 @@
     [button3 addTarget:self action:@selector(click3) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button3];
     
+}
+
+-(void)click1{
+    
+    
+    self.statusHiden = !self.statusHiden;
+    [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
 }
 
 -(void)click2{
@@ -78,7 +85,7 @@
 }
 
 
--(void)click1{
+-(void)click{
     
     TestViewController *test = [TestViewController new];
     [self presentViewController:test animated:YES completion:nil];
